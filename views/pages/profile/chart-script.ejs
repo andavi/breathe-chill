@@ -7,8 +7,6 @@
 
         // This creates normal js object to work wth
         journals = <%- JSON.stringify(journals) %>;
-        // journals.sort((a,b) => a.date - b.date);
-        // console.log(journals[0].date);
         colormap = <%- JSON.stringify(colormap) %>;
 
         // ============================
@@ -74,10 +72,22 @@
 
                     labels: journals.map(j => new Date(j.date)),
                     datasets: [{
+                        label: "Sadness",
+                        backgroundColor: colormap.sadness[1],
+                        borderColor: colormap.sadness[0],
+                        data: journals.map(j => j.sadness),
+                        borderWidth: 2
+                    }, {
                         label: "Sentiment",
                         backgroundColor: colormap.sentiment[1],
                         borderColor: colormap.sentiment[0],
                         data: journals.map(j => j.sentiment),
+                        borderWidth: 2
+                    }, {
+                        label: "Surprise",
+                        backgroundColor: colormap.surprise[1],
+                        borderColor: colormap.surprise[0],
+                        data: journals.map(j => j.surprise),
                         borderWidth: 2
                     }, {
                         label: "Anger",
@@ -96,18 +106,6 @@
                         backgroundColor: colormap.joy[1],
                         borderColor: colormap.joy[0],
                         data: journals.map(j => j.joy),
-                        borderWidth: 2
-                    }, {
-                        label: "Sadness",
-                        backgroundColor: colormap.sadness[1],
-                        borderColor: colormap.sadness[0],
-                        data: journals.map(j => j.sadness),
-                        borderWidth: 2
-                    }, {
-                        label: "Surprise",
-                        backgroundColor: colormap.surprise[1],
-                        borderColor: colormap.surprise[0],
-                        data: journals.map(j => j.surprise),
                         borderWidth: 2
                     }
                     ]
