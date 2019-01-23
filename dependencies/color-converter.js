@@ -29,31 +29,53 @@ function rgbToRgba(rgb) {
 function hexToRGBa (hexListStr, opacity) {
   return hexListStr.split(', ').map(hexToRgb).map(rgbToRgba, {opacity});
 }
-// hexToRGBa('#365FA3, #9DD98A, #9A77C7, #D5475A, #FCE4A8, #4FCCED', .5);
 
-const bluishO = hexToRGBa('#365FA3, #9DD98A, #9A77C7, #D5475A, #FCE4A8, #4FCCED',1);
-const bluishT = hexToRGBa('#365FA3, #9DD98A, #9A77C7, #D5475A, #FCE4A8, #4FCCED',.1);
 
-const emotions = ['sentiment', 'anger', 'fear', 'joy', 'sadness', 'surprise'];
+function generateColofMap (hexListString) {
+  const pairs = hexListString.split(', ').map(hex => {
+    return [
+      rgbToRgba.apply({opacity: 1}, [hexToRgb(hex)]),
+      rgbToRgba.apply({opacity: .05}, [hexToRgb(hex)])
+    ];
+  });
 
-const colormap = {};
-function getPairs(i) {
-  return [bluishO[i], bluishT[i]];
+  // table for orderomg emotion by color
+  const emotions = {
+    'sentiment': 1,
+    'anger': 3,
+    'fear': 4,
+    'joy': 5,
+    'sadness': 0,
+    'surprise': 2
+  };
+  const colormap = {};
+  for (let e of Object.keys(emotions)) {
+    colormap[e] = pairs[emotions[e]];
+  }
+  return colormap;
 }
-for (c of emotions) {
-  colormap.sentiment = getPairs(1);
-  colormap.anger = getPairs(3);
-  colormap.fear = getPairs(4);
-  colormap.joy = getPairs(5);
-  colormap.sadness = getPairs(0);
-  colormap.surprise = getPairs(2);
-}
 
-// console.log(bluishO, bluishT);
-console.log(colormap)
+
+// =======================================
+// keeping different color palettes here
+// =======================================
+// ideal chart colors should be easily distinguishable
+const blueishHL = '#365FA3, #9DD98A, #9A77C7, #D5475A, #FCE4A8, #4FCCED';
+const randomHL = '#4E1C48, #61627D, #92C5C4, #F3E3D1, #E43E61, #D3FFE7';
+const gentleGtoR = '#92A0A4, #ADAFA8, #E4D0B1, #E4AAAB, #E488A4, #C16F6D'; // better for gradient than chart
+const pinksToGreens = '#FE2A57, #FB788C, #F6BAA1, #AFB39D, #4B918D, #3D494A';
+const standard = '#3E455A, #A4CF4C, #A15697, #D83332, #FCDD5D, #5BBEDE';
+const standardHalfDark = '#2B303F, #94C635, #913C85, #D12423, #FCD741, #3FB3D8';
+
+// =======================================
+
+
+// const blueishCM = generateColofMap(blueishHL);
+
+console.log(generateColofMap(standard));
 
 module.exports = {
   hexToRgb,
   hexToRGBa,
-  colormap
+  colormap: generateColofMap(standardHalfDark)
 }
