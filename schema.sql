@@ -4,7 +4,7 @@
 --    psql just_breathe -f schema.sql
 
 -- Push db to heroku
--- heroku pg:push just_breathe DATABASE_URL --app breathe-chill
+-- heroku pg:push breathe_chill DATABASE_URL --app breathe-chill
 
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
