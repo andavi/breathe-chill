@@ -19,7 +19,6 @@
   }
   footer {
     flex-shrink: 0;
-    /* width: 100%; */
     text-align: center;
     background-color: rgba(40, 83, 134, 0.6);
     color: white;
@@ -129,7 +128,7 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body {
-    font-size: 140%;
+    /* font-size: 140%; */
   }
   footer {
     padding: 20px
