@@ -24,11 +24,11 @@ a:link {
 }
 
 #just-breathe-logo {
-  /* margin: 5px; */
+  margin-right: 5px;
   /* display: inline-block; */
   /* position: relative; */
   bottom: 0;
-  right: 5px;
+  /* right: 5px; */
   align-self: flex-end;
   font-size: 100%;
 }

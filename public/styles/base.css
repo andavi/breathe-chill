@@ -19,7 +19,7 @@
   }
   footer {
     flex-shrink: 0;
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
     background-color: rgba(40, 83, 134, 0.6);
     color: white;
