@@ -10,6 +10,7 @@ const indico = require('indico.io');
 indico.apiKey = process.env.INDICO_API_KEY;
 
 const createGradient = require('./dependencies/gradient');
+const colormap = require('./dependencies/color-converter').colormap;
 
 // Load env vars;
 require('dotenv').config();
@@ -164,7 +165,8 @@ function getProfile(req, res) {
         journals: result.rows[0].id === null ? undefined : result.rows,
         uid: req.params.uid,
         username: result.rows[0].username,
-        rgGradient: createGradient('rgb(170,0,0)', 'rgb(0,170,0)', 11)
+        rgGradient: createGradient('rgb(170,0,0)', 'rgb(0,170,0)', 11),
+        colormap
       });
     })
     .catch(err => handleError(err, res));
