@@ -94,6 +94,8 @@ header h4 {
 #map-container{
   min-height: 70%;
   height: 80%;
+  width: 90%;
+  margin: auto;
 }
 
 #map {
@@ -621,6 +623,12 @@ span.datestring {
   #banner>h2 {
     font-size: 250%;
   }
+  #geocoding {
+    height: 600px;
+  }
+  #map-container{
+    height: 85%;
+  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -633,6 +641,12 @@ span.datestring {
   div#user-button {
     font-size: 105%;
     padding: 7px 11px;
+  }
+  #geocoding {
+    height: 768px;
+  }
+  #map-container{
+    height: 86%;
   }
 }
 
@@ -648,6 +662,12 @@ span.datestring {
     font-size: 110%;
     padding: 9px 14px;
   }
+  #geocoding {
+    height: 992px;
+  }
+  #map-container{
+    height: 88%;
+  }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -660,5 +680,11 @@ span.datestring {
   div#user-button {
     font-size: 110%;
     padding: 11px 17px;
+  }
+  #geocoding {
+    height: 1200px;
+  }
+  #map-container{
+    height: 90%;
   }
 }
