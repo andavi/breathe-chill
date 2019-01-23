@@ -1,0 +1,30 @@
+<main id="profile">
+  <%- include('../../layout/banner', {bannerMessage: 'Profile Page'}) %>
+
+    <%- include('graph') %>
+
+    <!-- <div id="headingContainer"> -->
+      <h4>Your Journal Entries</h4>
+      <button class="new">Add New Entry</button>
+    <!-- </div> -->
+
+
+
+  <% if (typeof journals === 'object' && journals) { %>
+    <section id="previews">
+      <% journals.forEach(journal => { %>
+
+        <%- include('entry-preview', {journal}) %>
+
+        <%- include('entry', {journal}) %>
+
+        <%- include('form', {journal, username, uid}) %>
+
+        <%- include('delete', {journal, uid}) %>
+
+      <% }) %>
+    </section>
+  <% } else { %>
+  <p>You have not written any journal entries yet.</p>
+  <% } %>
+</main>
