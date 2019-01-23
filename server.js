@@ -70,7 +70,6 @@ function home(req, res) {
 
   return client.query(SQL)
     .then(suggestion => {
-      console.log(suggestion.rows);
       let array = suggestion.rows;
       // res.render('pages/index', {array, mapSRC: process.env.MAP});
       res.render('pages/index', {array, mapSRC: `https://maps.googleapis.com/maps/api/js?key=${process.env.API_KEY}&callback=initMap`})
@@ -198,7 +197,6 @@ function newJournal(req, res) {
 }
 
 function updateJournal(req, res) {
-  console.log('got here', req.body);
   indico.sentimentHQ(req.body.entry)
     .then(sentiment => {
       // seconen indical returns 5 emotion scores
@@ -248,12 +246,8 @@ function newSuggestion(req, res) {
   const SQL = `INSERT INTO suggestions (suggestion, name) VALUES ($1, $2);`;
   const values = [req.body.suggestion, req.body.name];
 
-  console.log('suggestion', req.body);
-
   return client.query(SQL, values)
     .then(result => {
-      console.log('in the then');
-      // res.render('pages/index');
       res.redirect('/');
     })
     .catch(err => handleError(err, res));
@@ -278,7 +272,6 @@ function normalizeJournalMetrics(sentiment, emotions) {
 // =============================
 
 function findAir(req, res){
-  console.log(req.query)
   return searchLatLong(req.query.search)
     .then( () => {
       res.render('pages/index');
@@ -303,12 +296,10 @@ function Location(location){
 
 // Resources
 function searchLatLong(query){
-  console.log('query', query);
   const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${query}&key=${process.env.GEOCODE_API_KEY}`;
   return superagent.get(url)
     .then(geoData => {
       const location = new Location(geoData.body.results[0]);
-      console.log('location', location);
 
       return location;
     })
