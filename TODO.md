@@ -1,5 +1,5 @@
 ## Bugs
-* Return link on Delete confirmation form not working
+* ~~Return link on Delete confirmation form not working~~
 
 
 ## Layout

@@ -24,7 +24,7 @@ a:link {
 }
 
 #just-breathe-logo {
-  margin-right: 5px;
+  margin: 0 10px 10px 0;
   /* display: inline-block; */
   /* position: relative; */
   bottom: 0;
@@ -140,6 +140,7 @@ main#login, main#createUser{
 @media only screen and (min-width: 600px) {
   #just-breathe-logo {
     font-size: 115%;
+    margin-right: 13px;
   }
 }
 
@@ -147,6 +148,7 @@ main#login, main#createUser{
 @media only screen and (min-width: 768px) {
   #just-breathe-logo {
     font-size: 130%;
+    margin-right: 16px;
   }
 }
 
@@ -154,6 +156,7 @@ main#login, main#createUser{
 @media only screen and (min-width: 992px) {
   #just-breathe-logo {
     font-size: 140%;
+    margin-right: 19px;
   }
 }
 
@@ -161,5 +164,6 @@ main#login, main#createUser{
 @media only screen and (min-width: 1200px) {
   #just-breathe-logo {
     font-size: 160%;
+    margin-right: 20px;
   }
 }

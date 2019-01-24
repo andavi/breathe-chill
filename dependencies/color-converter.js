@@ -72,7 +72,7 @@ const standardHalfDark = '#2B303F, #94C635, #913C85, #D12423, #FCD741, #3FB3D8';
 
 // const blueishCM = generateColofMap(blueishHL);
 
-console.log(generateColofMap(standard));
+// console.log(generateColofMap(standard));
 
 module.exports = {
   hexToRgb,
