@@ -627,7 +627,7 @@ span.datestring {
     font-size: 250%;
   }
   #geocoding {
-    height: 600px;
+    height: 500px;
   }
   #map-container{
     height: 85%;
@@ -654,7 +654,7 @@ span.datestring {
     right: 16px;
   }
   #geocoding {
-    height: 768px;
+    height: 600px;
   }
   #map-container{
     height: 86%;
@@ -682,7 +682,7 @@ span.datestring {
     right: 19px;
   }
   #geocoding {
-    height: 992px;
+    height: 864px;
   }
   #map-container{
     height: 88%;
@@ -709,7 +709,7 @@ span.datestring {
     right: 20px;
   }
   #geocoding {
-    height: 1200px;
+    height: 1070px;
   }
   #map-container{
     height: 90%;
