@@ -60,22 +60,14 @@ header h4 {
 
 .mains input  {
   margin-bottom: 10px;
-  border: 0mm;
-  /* height: 150%; */
+  /* border: 0mm; */
   width: 50%;
   max-width: 200px;
 }
 
 .mains textarea {
-  /* height: 200px; */
   width: 50%;
   font-family: arial;
-}
-
-.mains button {
-  background-color: white;
-  border: white;
-  cursor: pointer;
 }
 
 .mains li, .mains p{
