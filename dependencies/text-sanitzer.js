@@ -5,30 +5,24 @@ const wordPairs = fs.readFileSync('off-word-map', 'utf8').split('\n').map(w => w
 // console.log(wordPairs);
 
 // turn standard bad words into RXs
-let offRXs = wordPairs.map(p => p.split('-')[0].trim()).map(w => {
-  try {
-    return new RegExp(w, 'ig');
-  }
-  catch (e) {
-    return w;
-  }
-});
+let offRXs = wordPairs.map(p => p.split('-')[0].trim()).map(w => new RegExp(w, 'ig'));
 
-// console.log(offRXs)
-
-// // some slang words (*) need more complex RXs
-let rx = /\bnig(?!gardly)\w*/ig;
-offRXs[offRXs.indexOf('*n_word')] = rx;
-// console.log(offRXs)
 
 // pair replacements to RXs array
 const replacements = wordPairs.map(p => p.split('-')[1].trim());
 const rxMap = offRXs.map((rx, i) => [rx, replacements[i]]);
 console.log(rxMap);
 
+
+// // some slang words (*) need more complex RXs
+let rx = /\bnig(s\b)|\bnig(?!gardly)\w+?(s\b|\b)/ig;
+let rep = (m, p1, p2) => `ninja turtle${p1 || '' + p2|| ''}`;
+rxMap.push([rx, rep]);
+
 // ==============================
 // the function we will export
 function cleanMessage(message) {
+  console.log(message);
   rxMap.forEach(([rx, rep]) => {
     message = message.replace(rx, rep);
   });
@@ -37,7 +31,7 @@ function cleanMessage(message) {
 // ==============================
 
 // for anyone reading my code these test comments in no way represent me please know
-let test = 'I hate these cocksuckers fucking no good shit stain nigs around here!'
+let test = 'I hate these cocksuckers fucking no good shit stain nigs sluttin around makin even more niglettes!'
 
 console.log(cleanMessage(test));
 
