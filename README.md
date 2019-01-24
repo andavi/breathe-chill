@@ -19,12 +19,12 @@
 
 * As a person with anxiety, I want an app that give me suggestions to calm myself down.
 
-* As a person who gets stressed, I want an app that I can communicate with other people who struggle with stress and/or anxiety. 
+* As a person who gets stressed, I want an app that I can communicate with other people who struggle with stress and/or anxiety.
 
 * As a person who is a professional psychologist, I want an app where I can share articles for people with anxiety.
 
 * As a person who has anxiety, I want an app that I can watch stress relieving videos.
- 
+
 ##### Developer Stories
 
 * As a developer, I want code that I can easily read and adjust so I can add a feature to this project.
@@ -45,7 +45,7 @@ ___
 
 1. The opposing parties will sit down with the team for an open discussion on the arguments at hand.
 2. If after 20 minutes the issue is not resolved, a pros and cons list, and the team will make  a deciding vote on it.
-3. In the condition of a vote tie, the team will find a more senior member of the Code Fellows community and brief them on the issue and require their opinion on the issue. This will be the tie-breaking vote. 
+3. In the condition of a vote tie, the team will find a more senior member of the Code Fellows community and brief them on the issue and require their opinion on the issue. This will be the tie-breaking vote.
 
 #### <a id="communication">Communication Plan</a>
 
@@ -80,10 +80,10 @@ ___
 
 - Team Name: Anti-anxiety
 - Team members
-    - Lorin Stewart, 
-    - Jessica Elliott, 
-    - Andrew Davis, 
-    - Erik Johnson 
+    - Lorin Stewart,
+    - Jessica Elliott,
+    - [Andrew Davis](https://github.com/andavi),
+    - Erik Johnson
 - Description
     - Creating an app that helps users feel less anxious
 - Problem Domain and Solving Problem
@@ -106,9 +106,9 @@ ___
 
 https://www.webmd.com/depression/ss/slideshow-avoid-foods-anxiety-depression
 
-* CSS tutorials 
+* CSS tutorials
 animation code, https://www.youtube.com/watch?v=BSoIOi3GWy4
 
-* Code referenced from JE's repos, https://github.com/pnwjce/book_app, https://github.com/pnwjce/lab-08-sql-postgres, and https://github.com/bite-log/bite-log 
+* Code referenced from JE's repos, https://github.com/pnwjce/book_app, https://github.com/pnwjce/lab-08-sql-postgres, and https://github.com/bite-log/bite-log
 
 * Fonts found on Google fonts, and icons from FontAwesome

@@ -26,12 +26,23 @@ $(() => {
     showPage('#new');
   });
 
-  // show profile
+  // cancel edit
   $('a.cancel').on('click', e => {
     eventHelper(e);
-    $('.content>.entry-edit').remove();
+    $('.content>.entry-edit').hide();
+    // $(e.target).closest('.delete-form').hide();
     showPage('#profile');
   });
+
+
+  // nevermind - cancel delete
+  $('a.nevermind').on('click', e => {
+    eventHelper(e);
+    console.log(e.target.closest('div.delete-form').id);
+    const jid = e.target.closest('div.delete-form').id.split('-')[1];
+    $('.delete-form').hide();
+    $(`#entry-${jid}`).show();
+  })
 
   // show main chart
   $('#smallGraphContainer').on('click', e => {
@@ -56,7 +67,7 @@ $(() => {
     $(`#entry-${jid}`).show();
   });
 
-  $('a#toggle-login').on('click', e => {
+  $('a.return').on('click', e => {
     eventHelper(e);
     $(e.target).closest('.entry-full').hide();
     $('.delete-form').hide();
@@ -83,28 +94,5 @@ $(() => {
     $('.entry-full').hide();
     $(`#delete-${jid}`).show();
   });
-
-  // allow tab use in textareas
-  // $("textarea").keydown(function(e) {
-  //   console.log(e.keyCode);
-  //   if(e.keyCode === 9) { // tab was pressed
-  //       // get caret position/selection
-  //       var start = this.selectionStart;
-  //           end = this.selectionEnd;
-
-  //       var $this = $(this);
-
-  //       // set textarea value to: text before caret + tab + text after caret
-  //       $this.val($this.val().substring(0, start)
-  //                   + "\t"
-  //                   + $this.val().substring(end));
-
-  //       // put caret at right position again
-  //       this.selectionStart = this.selectionEnd = start + 1;
-
-  //       // prevent the focus lose
-  //       return false;
-  //   }
-  // });
 
 });

@@ -216,11 +216,6 @@ header h4 {
   margin: auto;
 }
 
-a.toggleLogin {
-  text-decoration: none;
-  font-size: 90%;
-}
-
 #previews {
   width: 90%;
   margin: auto;
@@ -254,7 +249,7 @@ a.toggleLogin {
   border-radius: 5px;
 }
 
-.journal p, .journal li {
+.journal p, .journal li, .delete-form p {
   margin-bottom: 10px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 85%;
@@ -407,13 +402,13 @@ b {
   border: 2px solid red;
 }
 
-.delete-form a.cancel {
+.delete-form a.nevermind {
   color: darkslategray;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 80%;
 }
 
-.delete-form a.cancel:hover {
+.delete-form a.nevermind:hover {
   color: darkgreen;
 }
 
@@ -483,28 +478,30 @@ input.date-picker {
 a.cancel {
   text-decoration: none;
   color: darkred;
-  font-size: 80%;
+  font-size: 90%;
 }
 
 a.cancel:hover {
   color: red;
+  text-decoration: underline;
 }
 
 
-a.return {
+a.toggle {
   color: rgb(67, 147, 197);
   text-decoration: none;
   display: block;
+  font-size: 90%;
 }
 
-a.return:hover {
+a.toggle:hover {
   color: darkcyan;
   text-decoration: underline;
 }
 
-a.login {
-  font-size: 80%;
-}
+/* a.login {
+  font-size: 90%;
+} */
 
 /* a.return {
   font-size: 100%;

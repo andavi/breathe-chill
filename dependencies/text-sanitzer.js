@@ -33,7 +33,9 @@ function cleanMessage(message) {
 // for anyone reading my code these test comments in no way represent me please know
 let test = 'I hate these cocksuckers fucking no good shit stain nigs sluttin around makin even more niglettes!'
 
-console.log(cleanMessage(test));
+let test2 = 'Fuck it they just let me grab them by the pussy.'
+
+console.log(cleanMessage(test2));
 
 
 module.exports = cleanMessage;
