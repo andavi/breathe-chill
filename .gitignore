@@ -145,3 +145,4 @@ $RECYCLE.BIN/
 ignored/
 .vscode/
 tmux*
+test*
