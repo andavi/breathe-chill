@@ -1,3 +1,16 @@
+This is my personal clone of a group final project (of which I was a part) for Code Fellows 301. The original repo can be found [here](https://github.com/breatheStill/anxiety_app).
+
+To see the journal in action hover over the icon in the top left and click on Log In. We have four users preloaded with data to see it in action. The usernames are:
+* trump
+* khan
+* hemingway
+* lama
+
+Each user's password for these examples is the same as its username (e.g. usernmae: trump, password: trump).
+
+Make sure to click on everything you can. The journal previews take you to the full journal entry with accompanying emotional text analysis data, while clicking on the small chart on the previews page takes you to a big chart that logs all of the data for all of the journal entries. This chart is interactive and can be used to filter by emotion and look for trends over time.
+
+
 ![CF](https://i.imgur.com/7v5ASc8.png)
 # Code Fellows 301 Final Project
 
