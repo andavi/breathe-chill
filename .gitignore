@@ -143,3 +143,6 @@ $RECYCLE.BIN/
 #####################################
 # Ignored by team members
 ignored/
+.vscode/
+tmux*
+test*

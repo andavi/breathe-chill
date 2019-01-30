@@ -17,6 +17,8 @@ header a {
 
 #menu {
   padding: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 #menu-content {
@@ -37,7 +39,7 @@ header a {
 }
 
 header h4 {
-  font-size: 75%;
+  font-size: 70%;
   text-decoration: none;
 }
 
@@ -58,22 +60,14 @@ header h4 {
 
 .mains input  {
   margin-bottom: 10px;
-  border: 0mm;
-  /* height: 150%; */
+  /* border: 0mm; */
   width: 50%;
   max-width: 200px;
 }
 
 .mains textarea {
-  /* height: 200px; */
   width: 50%;
   font-family: arial;
-}
-
-.mains button {
-  background-color: white;
-  border: white;
-  cursor: pointer;
 }
 
 .mains li, .mains p{
@@ -216,11 +210,6 @@ header h4 {
   margin: auto;
 }
 
-a.toggleLogin {
-  text-decoration: none;
-  font-size: 90%;
-}
-
 #previews {
   width: 90%;
   margin: auto;
@@ -254,7 +243,7 @@ a.toggleLogin {
   border-radius: 5px;
 }
 
-.journal p, .journal li {
+.journal p, .journal li, .delete-form p {
   margin-bottom: 10px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 85%;
@@ -407,13 +396,13 @@ b {
   border: 2px solid red;
 }
 
-.delete-form a.cancel {
+.delete-form a.nevermind {
   color: darkslategray;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 80%;
 }
 
-.delete-form a.cancel:hover {
+.delete-form a.nevermind:hover {
   color: darkgreen;
 }
 
@@ -483,28 +472,30 @@ input.date-picker {
 a.cancel {
   text-decoration: none;
   color: darkred;
-  font-size: 80%;
+  font-size: 90%;
 }
 
 a.cancel:hover {
   color: red;
+  text-decoration: underline;
 }
 
 
-a.return {
+a.toggle {
   color: rgb(67, 147, 197);
   text-decoration: none;
   display: block;
+  font-size: 90%;
 }
 
-a.return:hover {
+a.toggle:hover {
   color: darkcyan;
   text-decoration: underline;
 }
 
-a.login {
-  font-size: 80%;
-}
+/* a.login {
+  font-size: 90%;
+} */
 
 /* a.return {
   font-size: 100%;
@@ -551,27 +542,27 @@ a.return:hover {
 }
 
 #sentiment {
-  border: 4px solid rgba(71, 139, 194, 1);
+  border: 4px solid rgba(157, 217, 138, 1);
 }
 
 #anger {
-  border: 4px solid rgba(211, 69, 69, 1);
+  border: 4px solid rgba(213, 71, 90, 1);
 }
 
 #fear {
-  border: 4px solid rgba(252, 221, 128, 1);
+  border: 4px solid rgba(252, 228, 168, 1);
 }
 
 #joy {
-  border: 4px solid rgba(239, 149, 157, 1);
+  border: 4px solid rgba(79, 204, 237, 1);
 }
 
 #sadness {
-  border: 4px solid rgba(166, 212, 216, 1);
+  border: 4px solid rgba(54, 95, 163, 1);
 }
 
 #surprise {
-  border: 4px solid rgba(161, 204, 126, 1);
+  border: 4px solid rgba(154, 119, 199, 1);
 }
 
 /* END - Definitions */
@@ -581,10 +572,9 @@ small {
 }
 
 div#user-button {
-  font-size: 90%;
   background-color: aliceblue;
   color: rgb(25, 67, 116);
-  padding: 3px 5px;
+  padding: 4px 7px;
   border-radius: 10%;
   position: absolute;
   top: 10px;
@@ -614,20 +604,28 @@ span.datestring {
     font-size: 75%;
   }
   #wind-icon {
-    font-size: 30px;
+    font-size: 25px;
+  }
+  #menu {
+    margin-top: 13px;
+    margin-left: 13px;
   }
   div#user-button {
-    font-size: 100%;
-    padding: 5px 8px;
+    font-size: 115%;
+    top: 13px;
+    right: 13px;
   }
   #banner>h2 {
     font-size: 250%;
   }
   #geocoding {
-    height: 600px;
+    height: 500px;
   }
   #map-container{
     height: 85%;
+  }
+  header h4 {
+    font-size: 75%;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -636,17 +634,25 @@ span.datestring {
     font-size: 80%;
   }
   #wind-icon {
-    font-size: 40px;
+    font-size: 30px;
+  }
+  #menu {
+    margin-top: 16px;
+    margin-left: 16px;
   }
   div#user-button {
-    font-size: 105%;
-    padding: 7px 11px;
+    font-size: 130%;
+    top: 16px;
+    right: 16px;
   }
   #geocoding {
-    height: 768px;
+    height: 600px;
   }
   #map-container{
     height: 86%;
+  }
+  header h4 {
+    font-size: 80%;
   }
 }
 
@@ -656,17 +662,25 @@ span.datestring {
     font-size: 90%;
   }
   #wind-icon {
-    font-size: 50px;
+    font-size: 35px;
+  }
+  #menu {
+    margin-top: 19px;
+    margin-left: 19px;
   }
   div#user-button {
-    font-size: 110%;
-    padding: 9px 14px;
+    font-size: 145%;
+    top: 19px;
+    right: 19px;
   }
   #geocoding {
-    height: 992px;
+    height: 864px;
   }
   #map-container{
     height: 88%;
+  }
+  header h4 {
+    font-size: 85%;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -675,16 +689,24 @@ span.datestring {
     font-size: 95%;
   }
   #wind-icon {
-    font-size: 60px;
+    font-size: 40px;
+  }
+  #menu {
+    margin-top: 20px;
+    margin-left: 20px;
   }
   div#user-button {
-    font-size: 110%;
-    padding: 11px 17px;
+    font-size: 160%;
+    top: 20px;
+    right: 20px;
   }
   #geocoding {
-    height: 1200px;
+    height: 1070px;
   }
   #map-container{
     height: 90%;
+  }
+  header h4 {
+    font-size: 90%;
   }
 }

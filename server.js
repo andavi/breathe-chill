@@ -10,6 +10,7 @@ const indico = require('indico.io');
 indico.apiKey = process.env.INDICO_API_KEY;
 
 const createGradient = require('./dependencies/gradient');
+const colormap = require('./dependencies/color-converter').colormap;
 
 // Load env vars;
 require('dotenv').config();
@@ -164,7 +165,8 @@ function getProfile(req, res) {
         journals: result.rows[0].id === null ? undefined : result.rows,
         uid: req.params.uid,
         username: result.rows[0].username,
-        rgGradient: createGradient('rgb(170,0,0)', 'rgb(0,170,0)', 11)
+        rgGradient: createGradient('rgb(170,0,0)', 'rgb(0,170,0)', 11),
+        colormap
       });
     })
     .catch(err => handleError(err, res));
@@ -330,21 +332,3 @@ function handleError(err, res) {
 app.listen(PORT, () => {
   console.log(`server is up on port : ${PORT}`);
 });
-
-
-
-
-// ======================
-// For later
-// ======================
-const colors = [ 'rgba(85, 94, 123, 1)',
-  'rgba(183, 217, 104, 1)',
-  'rgba(181, 118, 173, 1)',
-  'rgba(224, 70, 68, 1)',
-  'rgba(247, 247, 122, 1)',
-  'rgba(124, 204, 229, 1)' ] [ 'rgba(85, 94, 123, 0.1)',
-  'rgba(183, 217, 104, 0.1)',
-  'rgba(181, 118, 173, 0.1)',
-  'rgba(224, 70, 68, 0.1)',
-  'rgba(247, 247, 122, 0.1)',
-  'rgba(124, 204, 229, 0.1)' ]
