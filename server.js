@@ -11,6 +11,7 @@ indico.apiKey = process.env.INDICO_API_KEY;
 
 const createGradient = require('./dependencies/gradient');
 const colormap = require('./dependencies/color-converter').colormap;
+const sanitizeText = require('./dependencies/text-sanitzer');
 
 // Load env vars;
 require('dotenv').config();
@@ -245,8 +246,9 @@ function deleteJournal(req, res) {
 }
 
 function newSuggestion(req, res) {
+  const cleanedSuggestion = sanitizeText(req.body.suggestion);
   const SQL = `INSERT INTO suggestions (suggestion, name) VALUES ($1, $2);`;
-  const values = [req.body.suggestion, req.body.name];
+  const values = [cleanedSuggestion, req.body.name];
 
   return client.query(SQL, values)
     .then(result => {
