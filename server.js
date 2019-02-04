@@ -247,8 +247,8 @@ function deleteJournal(req, res) {
 
 function newSuggestion(req, res) {
   const cleanedSuggestion = sanitizeText(req.body.suggestion);
-  const SQL = `INSERT INTO suggestions (suggestion, name) VALUES ($1, $2);`;
-  const values = [cleanedSuggestion, req.body.name];
+  const SQL = `INSERT INTO suggestions (suggestion, name, entered) VALUES ($1, $2, $3);`;
+  const values = [cleanedSuggestion, req.body.name, new Date()];
 
   return client.query(SQL, values)
     .then(result => {

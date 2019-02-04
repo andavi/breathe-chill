@@ -40,7 +40,7 @@ CREATE TABLE suggestions (
   id SERIAL PRIMARY KEY,
   suggestion TEXT,
   name TEXT,
-  entered TIMESTAMP DEFAULT now()
+  entered TIMESTAMPTZ
 );
 
 
