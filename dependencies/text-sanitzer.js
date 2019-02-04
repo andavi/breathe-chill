@@ -18,8 +18,9 @@ const transRxMap = [
   [ /cunt/gi, 'tagata faʻailoa' ],  // sa
   [ /cock/gi, 'jogoo' ],  // sw
   [ /slut/gi, 'paʻu' ],  // sa
-  [ /fag/gi, 'kippe' ]  // ge
-]
+  [ /fag/gi, 'kippe' ],  // ge
+  [ /ass/gi, 'punda']  // sw
+];
 
 
 // some slang words (*) need a more complex regex
